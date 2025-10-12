@@ -9,7 +9,7 @@ import Featured from './Components/Featured'
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-zinc-900 text-white ">
+    <div className="w-full min-h-screen bg-zinc-900 text-white [&::-webkit-scrollbar]:hidden ">
       <Navbar />
       <LandingPage/>
       <Marquee/>
