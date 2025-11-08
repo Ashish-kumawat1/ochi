@@ -13,7 +13,6 @@ function App() {
       <Navbar />
       <LandingPage/>
       <Marquee/>
-      <About/>
       <Eyes/>
       <Featured/>
     </div>

@@ -25,11 +25,12 @@ function landingPage() {
           {["Presentation and storytelling agency"," For innovation teams and global brands",].map((item,index)=>{
             return<p className='text-md land tracking-tight font-normal font-["Neue_Montreal"]'>{item}</p>
           })}
+          {/* this is animated button */}
           <div className='start group flex items-center gap-3 justify-center rounded-full cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md'>
             {/* Button */}
             <button aria-label="Start the project" className='relative z-10 uppercase border-2 font-normal tracking-wide text-sm border-zinc-500 rounded-full px-4 py-2 text-white transition-colors duration-300 ease-in-out group-hover:text-zinc-900'>
               <span className='relative z-20'>Start the project</span>
-              <span className='absolute inset-0 bg-white rounded-full transform -translate-x-full transition-transform duration-400 ease-in-out group-hover:translate-x-0'></span>
+              <span className='absolute -inset-0 bg-white rounded-full transform -translate-x-full transition-transform duration-400 ease-in-out group-hover:translate-x-0'></span>
             </button>
 
             {/* Arrow circle */}

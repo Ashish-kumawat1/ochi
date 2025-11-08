@@ -14,10 +14,10 @@ function Navbar() {
         return
       }
 
-      if (current > lastScrollY && current - lastScrollY > 10) {
+      if ( current > 1) {
         // scrolled down
         setVisible(false)
-      } else if (current < lastScrollY && lastScrollY - current > 10) {
+      } else if (current < 1) {
         // scrolled up
         setVisible(true)
       }
