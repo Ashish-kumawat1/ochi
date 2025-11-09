@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function Navbar() {
-  const [visible, setVisible] = useState(true)
+   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -14,10 +14,10 @@ function Navbar() {
         return
       }
 
-      if ( current > 1) {
+      if (current > lastScrollY && current - lastScrollY > 10) {
         // scrolled down
         setVisible(false)
-      } else if (current < 1) {
+      } else if (current < lastScrollY && lastScrollY - current > 10) {
         // scrolled up
         setVisible(true)
       }
@@ -27,6 +27,7 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
 
   return (
     <div className={`fixed z-[999] backdrop-blur bg-[rgba(255,255,255,0.03)] w-full px-20 py-5 f-["NeueMontreal"] flex justify-between items-center transition-transform duration-300 ease-in-out ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
